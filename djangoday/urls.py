@@ -6,8 +6,10 @@ from django.conf.urls.defaults import patterns, include, url
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'djangoday.views.home', name='home'),
+    url(r'^$', 'djangoday.main.views.home', name='home'),
+
     # url(r'^djangoday/', include('djangoday.foo.urls')),
+    url(r'^subscribe/$','djangoday.main.views.subscribe', name='subscribe'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

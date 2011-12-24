@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="it">
+<head>
+
+	<!-- [GENERAL] -->
+	<title>Django Day - Brescia (WEBdeBS) ~ 28 aprile 2011</title>
+
+	<!-- [META TAGS] -->
+	<meta charset="utf-8" />
+
+	<!-- [FILE CSS] -->
+	<link rel="stylesheet" href="{{ STATIC_URL }}media/css/style.css" type="text/css" media="screen" />
+
+	<!-- [FILE JS] -->
+	<script src="script/js/jquery.min.js"></script>
+	<script src="script/js/interaction.js"></script>
+	<!--[if lt IE 9]>
+	<script src="script/js/html5.js"></script>
+	<![endif]-->
+
+	<!-- [GOOGLE ANALYTICS] -->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-19644926-5']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+<div id="boxRoot">
+
+    {% block content %}{% endblock %}
+		
+		<footer>
+			<a href="http://www.webdebs.org/"><img class="webdebs" src="{{ STATIC_URL }}media/img/interface/footer_webdebs.png" alt="E' una iniziativa di WebDeBs" /></a>
+			<a href="mailto:info@djangoday.it"><img class="email" src="{{ STATIC_URL }}media/img/interface/footer_contact_us.png" alt="Contact us" /></a>
+			<span class="follow">
+				<a href="http://twitter.com/#!/djangoday"><img src="{{ STATIC_URL }}media/img/interface/footer_follow_twitter.png" alt="Follow us on Twitter" /></a>
+			</span>
+		</footer>
+
+	</div>
+
+</body>
+</html>
