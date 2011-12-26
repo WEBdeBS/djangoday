@@ -1,0 +1,11 @@
+
+        <form id="secIscrizioneSignup" action="{% url subscribe %}" method="POST">
+
+            {% csrf_token %}
+            <fieldset>
+                <label for="inp_signup_email" id="lbl_signup_email">Indirizzo email >
+                    <input type="email" name="inp_signup_email" id="inp_signup_email" placeholder="inserisci il tuo indirizzo email"/></label>
+                <input type="submit" name="inp_signup_submit" id="inp_signup_submit" value="invia" />
+            </fieldset>
+            <span id="inp_signup_feedback"></span>
+        </form>

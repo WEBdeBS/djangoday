@@ -14,14 +14,7 @@
             <h3>Iscrizione</h3>
             <p>Le iscrizioni al momento <strong>non sono ancora aperte</strong>, per&ograve;  se volete   'mettere un piede dentro la porta' potete registrarvi alla nostra newsletter: rimarrete sempre informati e sarete <strong>i primi ad essere avvisati</strong> non appena apriranno ufficialmente.</p>
 
-            <form id="secIscrizioneSignup" action="{% url subscribe %}" method="POST">
-                <fieldset>
-                    <label for="inp_signup_email" id="lbl_signup_email">Indirizzo email >
-                        <input type="email" name="inp_signup_email" id="inp_signup_email" placeholder="inserisci il tuo indirizzo email"/></label>
-                    <input type="submit" name="inp_signup_submit" id="inp_signup_submit" value="invia" />
-                </fieldset>
-                <span id="inp_signup_feedback"></span>
-            </form>
+            {% include 'newsletter_form.html' %}
 
         </section>
 

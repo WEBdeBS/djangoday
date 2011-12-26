@@ -7,18 +7,11 @@
     <section id="secIscrizione">
         <h3>Iscrizione</h3>
         {% if form %}
-        <p>
-            {{ from.errors }}
-        </p>
+            <p>
+                {{ form.errors }}
+            </p>
 
-        <form id="secIscrizioneSignup" action="{% url subscribe %}" method="POST">
-            <fieldset>
-                <label for="inp_signup_email" id="lbl_signup_email">Indirizzo email >
-                    <input type="email" name="inp_signup_email" id="inp_signup_email" placeholder="inserisci il tuo indirizzo email"/></label>
-                <input type="submit" name="inp_signup_submit" id="inp_signup_submit" value="invia" />
-            </fieldset>
-            <span id="inp_signup_feedback"></span>
-        </form>
+           {% include 'newsletter_form.html' %}
         {%  else %}
             <p>
                 Fatto! Ora per rendere effettiva l'iscrizione &egrave; sufficiente cliccare sul link di attivazione che ti abbiamo spedito per email all'indirizzo che hai indicato.
