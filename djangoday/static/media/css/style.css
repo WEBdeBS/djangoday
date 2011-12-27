@@ -357,5 +357,6 @@ __________________________________________________________ */
 
 footer { position: relative; width: 100%; height: 40px; display: block; margin-top: 80px; }
 footer img.webdebs { position: absolute; top: 0px; left: 27px; }
+footer img.django { position: absolute; top: 6px; left: 260px; }
 footer img.email { position: absolute; top: 0px; right: 120px; }
 footer span.follow { position: absolute; top: 0px; right: 18px; width: 40px; margin: 0px; padding: 0px 0px 0px 68px; background: url(../img/interface/footer_follow_text.png) no-repeat 0px 0px; }
