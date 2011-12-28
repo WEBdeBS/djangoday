@@ -130,7 +130,79 @@ header {
 
 	header h1, header h2 { text-indent: -9999px; overflow: hidden; }
 
+	header div.stuff {
+		position: absolute;
+		bottom: 45px;
+		right: 40px;
+		width: 100%;
+	}
 
+	header div.stuff div.socialize {
+		/* layout
+		------------------ */
+		margin: 0px;
+		padding: 5px 5px 5px 10px;
+		display: block;
+		vertical-align: top;
+		float: right;
+		/* formatting
+		------------------ */
+		background: rgba(255,255,255,0.2);
+		/* css3
+		------------------ */
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		}
+
+		header div.stuff div.socialize > span { 
+			/* layout
+			------------------ */
+			font-family: "LeagueGothic","BebasNeue";
+			width: auto;
+			height: 29px;
+			margin: 0px 15px 0px 0px;
+			padding: 0px;
+			display: block;
+			float: left;
+			/* formatting
+			------------------ */
+			font-size: 18px;
+			line-height: 32px;
+			text-transform: uppercase;
+			text-align: left;
+			vertical-align: top;
+			color: #123233;
+			/* css3
+			------------------ */
+			text-shadow: rgba(255,255,255,0.1) 0px 1px 0px;	
+		}	
+
+		header div.stuff div.socialize div.addthis_toolbox {
+			/* layout
+			------------------ */
+			/*width: 310px;*/
+			padding: 4px 4px;
+			display: inline-block;
+			float: left;
+			/* formatting
+			------------------ */
+			background: #FFFFFF;
+			background: rgba(255,255,255,0.6);
+			/* css3
+			------------------ */
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			}
+
+			header div.stuff div.socialize div.addthis_toolbox iframe { height: 21px !important; }
+			header div.stuff div.socialize div.addthis_toolbox a { float: left; margin-top: 2px; padding: 0px 2px; }
+			header div.stuff div.socialize div.addthis_toolbox a.addthis_button_facebook_like ,
+			header div.stuff div.socialize div.addthis_toolbox a.addthis_button_tweet {
+				height: 21px !important;
+				margin-top: 0px;
+			}
 
 /*||||||||||||||||||||||||||||||| MAIN |||||||||||
 __________________________________________________________ */
@@ -240,7 +312,7 @@ section#secIscrizione form {
 		line-height: 36px;
 		text-transform: uppercase;
 		vertical-align: top;
-		color: #0B2226;
+		color: #123233;
 		/* css3
 		------------------ */
 		text-shadow: rgba(255,255,255,0.2) 0px 1px 0px;	
@@ -267,7 +339,22 @@ section#secIscrizione form {
         box-shadow: inset 0px 1px 2px rgba(0,0,0,0.4);
         background: #FFFFFF;
         border: 1px solid #666666;
-	}
+		}
+		section#secIscrizione form input[type=email]::-webkit-input-placeholder {
+			font-family: Georgia, Times, “Times New Roman”, serif;
+			font-size: 14px;
+			line-height: 30px;
+			font-style: italic;
+			padding: 2px 5px;
+			color: #A9A9A9;
+		}
+		section#secIscrizione form input[type=email]:-moz-placeholder {
+			font-family: Georgia, Times, “Times New Roman”, serif;
+			font-size: 14px;
+			font-style: italic;
+			padding: 2px 8px;
+			color: #A9A9A9;
+		}
 
 	section#secIscrizione form input[type=submit] { 
 		/* layout
@@ -286,9 +373,9 @@ section#secIscrizione form {
 		letter-spacing: 0px;
 		text-transform: uppercase;
 		cursor: pointer;
-		color: #555555;
+		color: #304948;
 		background-color: #CACACA; 
-		border: 2px solid #777777;
+		border: 2px solid #304948;
 		/* css3
 		------------------ */
 		-webkit-background-clip: padding-box; /* to avoid jagged rounded corners */
@@ -303,7 +390,7 @@ section#secIscrizione form {
 		-webkit-box-shadow: inset 1px 1px 3px rgba(255,255,255,0.6), 0px 0px 3px rgba(0,0,0,0.2);
         box-shadow: inset 1px 1px 3px rgba(255,255,255,0.6), 0px 0px 3px rgba(0,0,0,0.2);
 		}
-		section#secIscrizione form input[type=submit]:hover { color: #333333; border-color: #666666; }
+		section#secIscrizione form input[type=submit]:hover { color: #123233; border-color: #123233; }
 		section#secIscrizione form input[type=submit]:active { color: #000000; }
 		
 
@@ -357,6 +444,6 @@ __________________________________________________________ */
 
 footer { position: relative; width: 100%; height: 40px; display: block; margin-top: 80px; }
 footer img.webdebs { position: absolute; top: 0px; left: 27px; }
-footer img.django { position: absolute; top: 6px; left: 260px; }
-footer img.email { position: absolute; top: 0px; right: 120px; }
-footer span.follow { position: absolute; top: 0px; right: 18px; width: 40px; margin: 0px; padding: 0px 0px 0px 68px; background: url(../img/interface/footer_follow_text.png) no-repeat 0px 0px; }
+footer img.django { position: absolute; top: 7px; left: 50%; margin-left: -50px; }
+footer img.email { position: absolute; top: 0px; right: 140px; }
+footer span.follow { position: absolute; top: 0px; right: 30px; width: 40px; margin: 0px; padding: 0px 0px 0px 68px; background: url(../img/interface/footer_follow_text.png) no-repeat 0px 0px; }
