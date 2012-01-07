@@ -7,8 +7,8 @@
     <section id="secIscrizione">
         <h3>Iscrizione</h3>
         {% if form %}
-            <p>
-                {{ form.errors }}
+            <p style="background: #ffffff; color: #CC0000">
+                {{ errors|safe }}
             </p>
 
            {% include 'newsletter_form.html' %}

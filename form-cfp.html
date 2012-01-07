@@ -1,0 +1,105 @@
+
+<!doctype html>
+<html lang="it">
+<head>
+
+    <!-- [GENERAL] -->
+    <title>Django Day - Brescia (WEBdeBS) ~ 28 aprile 2011</title>
+
+    <!-- [META TAGS] -->
+    <meta charset="utf-8" />
+
+    <!-- [FILE CSS] -->
+    <link rel="stylesheet" href="/static/media/css/style.css" type="text/css" media="screen" />
+
+    <!-- [FILE JS] -->
+    <script src="script/js/jquery.min.js"></script>
+    <script src="script/js/interaction.js"></script>
+    <!--[if lt IE 9]>
+	<script src="script/js/html5.js"></script>
+	<![endif]-->
+
+    <!-- [GOOGLE ANALYTICS] -->
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-19644926-5']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+
+</head>
+<body>
+
+
+
+<div id="boxRoot">
+    <header>
+        <h1>Django Day - Brescia (WEBdeBS) ~ 28 aprile 2011</h1>
+        <h2>Una giornata dedicata al web-framework dei professionisti. FOR REAL.</h2>
+        <div class="stuff">
+            <div class="socialize">
+                <span>Fai una segnalazione:</span>
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style ">
+                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                    <a class="addthis_button_tweet"></a>
+                    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+                </div>
+                <script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+                <!-- AddThis Button END -->
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <form method="POST">
+        <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='f1ff36742b4cbbe1c8d927fdbdbfb0e6' /></div>
+
+
+        <ul class="errorlist"><li>Questo campo è obbligatorio.</li></ul>
+        <p><label for="id_titolo">Titolo:</label> <input id="id_titolo" type="text" name="titolo" maxlength="150" /></p>
+        <ul class="errorlist"><li>Questo campo è obbligatorio.</li></ul>
+        <p><label for="id_abstract">Abstract:</label> <textarea id="id_abstract" rows="10" cols="40" name="abstract"></textarea></p>
+        <ul class="errorlist"><li>Questo campo è obbligatorio.</li></ul>
+        <p><label for="id_nome">Nome:</label> <input id="id_nome" type="text" name="nome" maxlength="150" /></p>
+        <ul class="errorlist"><li>Questo campo è obbligatorio.</li></ul>
+        <p><label for="id_cognome">Cognome:</label> <input id="id_cognome" type="text" name="cognome" maxlength="150" /></p>
+        <ul class="errorlist"><li>Questo campo è obbligatorio.</li></ul>
+        <p><label for="id_email">Email:</label> <input id="id_email" type="text" name="email" maxlength="75" /></p>
+        <p><label for="id_twitter">Twitter:</label> <input id="id_twitter" type="text" name="twitter" maxlength="150" /></p>
+        <p><label for="id_linkedin">Linkedin:</label> <input id="id_linkedin" type="text" name="linkedin" maxlength="150" /></p>
+        <p><label for="id_skype">Skype:</label> <input id="id_skype" type="text" name="skype" maxlength="150" /></p>
+
+        <p>
+            <input type="submit" value="Invia">
+        </p>
+
+    </form>
+
+
+
+    <footer>
+        <a href="http://www.djangoproject.com/"><img class="django" src="http://media.djangoproject.com/img/badges/djangosite100x25.gif" border="0" alt="A Django site." title="A Django site." /></a>
+        <a href="http://www.webdebs.org/"><img class="webdebs" src="/static/media/img/interface/footer_webdebs.png" alt="E' una iniziativa di WebDeBs" /></a>
+        <a href="mailto:info@djangoday.it"><img class="email" src="/static/media/img/interface/footer_contact_us.png" alt="Contact us" /></a>
+			<span class="follow">
+				<a href="http://twitter.com/#!/djangoday"><img src="/static/media/img/interface/footer_follow_twitter.png" alt="Follow us on Twitter" /></a>
+			</span>
+    </footer>
+
+</div>
+
+</body>
+</html>

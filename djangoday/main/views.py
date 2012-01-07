@@ -1,7 +1,9 @@
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
+from django.views.generic.edit import CreateView
 import mailchimp
 from main.forms import NewsletterSubscription
+from main.models import CallForPaper
 
 __author__ = 'sam'
 
@@ -15,11 +17,22 @@ def subscribe(request):
     if request.POST:
         form = NewsletterSubscription(request.POST)
         if form.is_valid():
-            list = mailchimp.utils.get_connection().get_list_by_id('160d27d6be')
-            list.subscribe(form.cleaned_data['inp_signup_email'],{'EMAIL':form.cleaned_data['inp_signup_email']})
+            try:
+                list = mailchimp.utils.get_connection().get_list_by_id('160d27d6be')
+                list.subscribe(form.cleaned_data['inp_signup_email'],{'EMAIL':form.cleaned_data['inp_signup_email']})
+            except Exception as excp:
+                    out['form'] = form
+                    out['errors'] = unicode(excp)
         else:
             out['form'] = form
+            out['errors'] = form.errors
     else:
         form = NewsletterSubscription()
         out['form'] = form
     return render_to_response('subscription.html',out ,context_instance=RequestContext(request))
+
+class CallForPaperView(CreateView):
+    template_name = 'cfp.html'
+    success_url = '/' #TODO
+    model = CallForPaper
+
