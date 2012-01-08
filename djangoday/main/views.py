@@ -1,5 +1,7 @@
+from django.core import urlresolvers
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
+from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
 import mailchimp
 from main.forms import NewsletterSubscription
@@ -33,8 +35,15 @@ def subscribe(request):
 
 class CallForPaperView(CreateView):
     template_name = 'cfp.html'
-    success_url = '/' #TODO
     model = CallForPaper
 
+    def get_success_url(self):
+        return urlresolvers.reverse('thanks')
 
+    def post(self, request, *args, **kwargs):
+        outcome = super(CallForPaperView).post(request)
+
+
+class ThanksView(TemplateView):
+    template_name = 'thanks.html'
 
