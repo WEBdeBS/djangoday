@@ -126,8 +126,12 @@ INSTALLED_APPS = (
 
 
 
+try:
+    MAILCHIMP_API_KEY = os.environ['MAILCHIMP_API_KEY']
+except Exception:
+    print 'MAILCHIMP_API_KEY not found'
+    MAILCHIMP_API_KEY = 'NOT_FOUND'
 
-MAILCHIMP_API_KEY = os.environ['MAILCHIMP_API_KEY']
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

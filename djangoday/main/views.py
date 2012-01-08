@@ -36,3 +36,5 @@ class CallForPaperView(CreateView):
     success_url = '/' #TODO
     model = CallForPaper
 
+
+
